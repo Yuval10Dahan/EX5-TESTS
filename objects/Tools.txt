@@ -1,1 +1,4 @@
-tttttttttttttttt
+clang++-14 -std=c++2a -Werror -Wsign-conversion -Isources --compile Demo.cpp -o Demo.o
+clang++-14 -std=c++2a -Werror -Wsign-conversion -Isources --compile sources/AscendingIterator.cpp -o objects/AscendingIterator.o
+sources/AscendingIterator.cpp:17:72: error: non-const lvalue reference to type 'MagicalContainer' cannot bind to a temporary of type 'MagicalContainer'
+AscendingIterator::AscendingIterator(const AscendingIterator &other) : mContainer_(other.getMagicalContainer()) {}
