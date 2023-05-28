@@ -15,7 +15,7 @@ PrimeIterator::PrimeIterator(MagicalContainer &container) : mContainer_(containe
 
 
 // copy constructor
-PrimeIterator::PrimeIterator(const PrimeIterator &other) : mContainer_(other.getMagicalContainer()) {}
+PrimeIterator::PrimeIterator(const PrimeIterator &other) : mContainer_(other.mContainer_) {}
 
 // destructor
 PrimeIterator::~PrimeIterator() {}

@@ -15,7 +15,7 @@ SideCrossIterator::SideCrossIterator(MagicalContainer &container) : mContainer_(
 
 
 // copy constructor
-SideCrossIterator::SideCrossIterator(const SideCrossIterator &other) : mContainer_(other.getMagicalContainer()) {}
+SideCrossIterator::SideCrossIterator(const SideCrossIterator &other) : mContainer_(other.mContainer_) {}
 
 // destructor
 SideCrossIterator::~SideCrossIterator() {}

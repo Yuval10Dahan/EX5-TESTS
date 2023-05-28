@@ -14,7 +14,7 @@ AscendingIterator::AscendingIterator(MagicalContainer &container) : mContainer_(
 
 
 // copy constructor
-AscendingIterator::AscendingIterator(const AscendingIterator &other) : mContainer_(other.getMagicalContainer()) {}
+AscendingIterator::AscendingIterator(const AscendingIterator &other) : mContainer_(other.mContainer_) {}
 
 // destructor
 AscendingIterator::~AscendingIterator() {}
