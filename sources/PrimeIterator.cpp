@@ -11,8 +11,8 @@ using namespace std;
 // Constructor
 PrimeIterator::PrimeIterator(MagicalContainer &container) : mContainer_(container) {}
 
-// default constructor
-
+// // default constructor
+// PrimeIterator::PrimeIterator() : mContainer_(MagicalContainer()) {}
 
 // copy constructor
 PrimeIterator::PrimeIterator(const PrimeIterator &other) : mContainer_(other.mContainer_) {}

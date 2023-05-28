@@ -11,8 +11,8 @@ using namespace std;
 // Constructor
 SideCrossIterator::SideCrossIterator(MagicalContainer &container) : mContainer_(container) {}
 
-// default constructor
-
+// // default constructor
+// SideCrossIterator::SideCrossIterator() : mContainer_(MagicalContainer()) {}
 
 // copy constructor
 SideCrossIterator::SideCrossIterator(const SideCrossIterator &other) : mContainer_(other.mContainer_) {}

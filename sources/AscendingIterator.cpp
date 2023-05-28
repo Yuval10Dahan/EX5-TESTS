@@ -10,8 +10,8 @@ using namespace std;
 // constructor
 AscendingIterator::AscendingIterator(MagicalContainer &container) : mContainer_(container) {}
 
-// default constructor
-
+// // default constructor
+// AscendingIterator::AscendingIterator() : mContainer_(MagicalContainer()) {}
 
 // copy constructor
 AscendingIterator::AscendingIterator(const AscendingIterator &other) : mContainer_(other.mContainer_) {}

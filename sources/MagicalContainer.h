@@ -16,10 +16,14 @@ class MagicalContainer
 
     public:
 
+        // constructor
+        MagicalContainer() = default;
+
         // methods
         void addElement(int element);
         void removeElement(int element);
         int size() const;
+        bool elementExists(int element);
 };
 
 
@@ -37,7 +41,8 @@ class AscendingIterator
         // Constructor
         AscendingIterator(MagicalContainer &container);
 
-        // default constructor
+        // // default constructor
+        // AscendingIterator();
 
         // copy constructor
         AscendingIterator(const AscendingIterator &other);
@@ -92,7 +97,8 @@ class SideCrossIterator
         // Constructor
         SideCrossIterator(MagicalContainer &container);
 
-        // default constructor
+        // // default constructor
+        // SideCrossIterator();
 
         // copy constructor
         SideCrossIterator(const SideCrossIterator &other);
@@ -147,7 +153,8 @@ class PrimeIterator
         // Constructor
         PrimeIterator(MagicalContainer &container);
 
-        // default constructor
+        // // default constructor
+        // PrimeIterator();
 
         // copy constructor
         PrimeIterator(const PrimeIterator &other);
