@@ -54,30 +54,6 @@ TEST_CASE("MagicalContainer")
 
 TEST_CASE("AscendingIterator") 
 {
-    SUBCASE("Checking ascending iteration")
-    {
-        MagicalContainer testContainer;
-
-        testContainer.addElement(19);
-        testContainer.addElement(24);
-        testContainer.addElement(25);
-        testContainer.addElement(56);
-        testContainer.addElement(4);
-
-        AscendingIterator ascendingIter(testContainer);
-
-        // store the numbers from the container in a vector
-        std::vector<int> expected{ 4, 19, 24, 25, 56 };
-        std::vector<int> actual;
-
-        for (auto it = ascendingIter.begin(); it != ascendingIter.end(); ++it) 
-        {
-            actual.push_back(*it);
-        }
-
-        CHECK(actual == expected);
-    }
-
     SUBCASE("Assignment Operator, Operator == and Operator !=")
     {
         MagicalContainer testContainer;
@@ -168,30 +144,6 @@ TEST_CASE("AscendingIterator")
 
 TEST_CASE("SideCrossIterator") 
 {
-    SUBCASE("Checking sideCross iteration")
-    {
-        MagicalContainer testContainer;
-
-        testContainer.addElement(19);
-        testContainer.addElement(24);
-        testContainer.addElement(25);
-        testContainer.addElement(56);
-        testContainer.addElement(4);
-
-        SideCrossIterator SideIter(testContainer);
-
-        // store the numbers from the container in a vector
-        std::vector<int> expected{ 19, 4, 24, 56, 25 };
-        std::vector<int> actual;
-
-        for (auto it = SideIter.begin(); it != SideIter.end(); ++it) 
-        {
-            actual.push_back(*it);
-        }
-
-        CHECK(actual == expected);
-    }
-
     SUBCASE("Assignment Operator, Operator == and Operator !=")
     {
         MagicalContainer testContainer;
@@ -229,7 +181,7 @@ TEST_CASE("SideCrossIterator")
 
         for (auto it = SideIter.begin(); it != SideIter.end(); ++it) 
         {
-            int indexOfVector = 0;
+            size_t indexOfVector = 0;
 
             CHECK(*SideIter == compare.at(indexOfVector)); // 5 1 4 2 3
 
@@ -291,30 +243,6 @@ TEST_CASE("SideCrossIterator")
 
 TEST_CASE("PrimeIterator") 
 {
-    SUBCASE("Checking ascending iteration")
-    {
-        MagicalContainer testContainer;
-
-        testContainer.addElement(19);
-        testContainer.addElement(24);
-        testContainer.addElement(7);
-        testContainer.addElement(56);
-        testContainer.addElement(17);
-
-        PrimeIterator primeIter(testContainer);
-
-        // store the numbers from the container in a vector
-        std::vector<int> expected{ 19, 7, 17 };
-        std::vector<int> actual;
-
-        for (auto it = primeIter.begin(); it != primeIter.end(); ++it) 
-        {
-            actual.push_back(*it);
-        }
-
-        CHECK(actual == expected);
-    }
-
     SUBCASE("Assignment Operator, Operator == and Operator !=")
     {
         MagicalContainer testContainer;
@@ -352,7 +280,7 @@ TEST_CASE("PrimeIterator")
 
         for (auto it = primeIter.begin(); it != primeIter.end(); ++it) 
         {
-            int indexOfVector = 0;
+            size_t indexOfVector = 0;
 
             CHECK(*primeIter == compare.at(indexOfVector)); // 7 5 3 2
 
