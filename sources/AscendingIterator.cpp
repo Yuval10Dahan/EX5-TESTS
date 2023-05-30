@@ -1,6 +1,6 @@
 #include <iostream>
 #include <algorithm>
-#include "MagicalContainer.h"
+#include "MagicalContainer.hpp"
 
 
 
@@ -8,73 +8,73 @@ using namespace std;
 
 
 // constructor
-AscendingIterator::AscendingIterator(MagicalContainer &container) : mContainer_(container) {}
+MagicalContainer::AscendingIterator::AscendingIterator(MagicalContainer &container) : mContainer_(container) {}
 
 // // default constructor
 // AscendingIterator::AscendingIterator() : mContainer_(MagicalContainer()) {}
 
 // copy constructor
-AscendingIterator::AscendingIterator(const AscendingIterator &other) : mContainer_(other.mContainer_) {}
+MagicalContainer::AscendingIterator::AscendingIterator(const AscendingIterator &other) : mContainer_(other.mContainer_) {}
 
 // destructor
-AscendingIterator::~AscendingIterator() {}
+MagicalContainer::AscendingIterator::~AscendingIterator() {}
 
 // getters
-MagicalContainer AscendingIterator::getMagicalContainer() const
+MagicalContainer MagicalContainer::AscendingIterator::getMagicalContainer() const
 {
     return this->mContainer_;
 }
 
 // operator= (Assignment operator)
-AscendingIterator& AscendingIterator::operator=(const AscendingIterator &other)
+MagicalContainer::AscendingIterator& MagicalContainer::AscendingIterator::operator=(const AscendingIterator &other)
 {
     return *this;
 }
 
 // operator == 
-bool AscendingIterator::operator==(const AscendingIterator &other) const
+bool MagicalContainer::AscendingIterator::operator==(const AscendingIterator &other) const
 {
     return false;
 }
 
 // operator !=
-bool AscendingIterator::operator!=(const AscendingIterator &other) const
+bool MagicalContainer::AscendingIterator::operator!=(const AscendingIterator &other) const
 {
     return false;
 }
 
 // operator >
-bool AscendingIterator::operator>(const AscendingIterator &other) const
+bool MagicalContainer::AscendingIterator::operator>(const AscendingIterator &other) const
 {
     return false;
 }
 
 // operator <
-bool AscendingIterator::operator<(const AscendingIterator &other) const
+bool MagicalContainer::AscendingIterator::operator<(const AscendingIterator &other) const
 {
     return false;
 }
 
 // operator* (Dereference operator)
-int AscendingIterator::operator*() const
+int MagicalContainer::AscendingIterator::operator*() const
 {
     return 0;
 }
 
 // operator++ (prefix --> ++i)
-AscendingIterator& AscendingIterator::operator++()
+MagicalContainer::AscendingIterator& MagicalContainer::AscendingIterator::operator++()
 {
     return *this;
 }
 
 
-AscendingIterator AscendingIterator::begin()
+MagicalContainer::AscendingIterator MagicalContainer::AscendingIterator::begin()
 {
     return *this;
 }
 
 
-AscendingIterator AscendingIterator::end()
+MagicalContainer::AscendingIterator MagicalContainer::AscendingIterator::end()
 {
     return *this;
 }

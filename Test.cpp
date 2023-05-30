@@ -2,7 +2,7 @@
 #include <cmath>
 #include <iostream>
 #include "doctest.h"
-#include "sources/MagicalContainer.h"
+#include "sources/MagicalContainer.hpp"
 
 using namespace std;
 
@@ -63,10 +63,10 @@ TEST_CASE("AscendingIterator")
         testContainer.addElement(2);
         testContainer.addElement(3);
 
-        AscendingIterator Aiterator(testContainer);
+        MagicalContainer::AscendingIterator Aiterator(testContainer);
 
         // Create another iterator and assign the first iterator to it
-        AscendingIterator Aiterator2(defaultContainer);
+        MagicalContainer::AscendingIterator Aiterator2(defaultContainer);
         Aiterator2 = Aiterator;
 
         // Check if the container references are the same
@@ -85,7 +85,7 @@ TEST_CASE("AscendingIterator")
             testContainer.addElement(i); // 10 9 8 7 6 5 4 3 2 1
         }
 
-        AscendingIterator Aiterator(testContainer);
+        MagicalContainer::AscendingIterator Aiterator(testContainer);
 
         for (auto it = Aiterator.begin(); it != Aiterator.end(); ++it) 
         {
@@ -101,7 +101,7 @@ TEST_CASE("AscendingIterator")
         testContainer.addElement(1);
         testContainer.addElement(2);
 
-        AscendingIterator Aiterator(testContainer);
+        MagicalContainer::AscendingIterator Aiterator(testContainer);
 
         // Increment the iterator and check the value
         ++Aiterator;
@@ -119,7 +119,7 @@ TEST_CASE("AscendingIterator")
         testContainer.addElement(2);
         testContainer.addElement(33);
 
-        AscendingIterator Aiterator(testContainer);
+        MagicalContainer::AscendingIterator Aiterator(testContainer);
 
         auto begin = Aiterator.begin(); // begin iterator
 
@@ -134,7 +134,7 @@ TEST_CASE("AscendingIterator")
         testContainer.addElement(2);
         testContainer.addElement(33);
 
-        AscendingIterator Aiterator(testContainer);
+        MagicalContainer::AscendingIterator Aiterator(testContainer);
 
         auto end = Aiterator.end(); // end iterator
 
@@ -153,10 +153,10 @@ TEST_CASE("SideCrossIterator")
         testContainer.addElement(2);
         testContainer.addElement(3);
 
-        SideCrossIterator SideIter(testContainer);
+        MagicalContainer::SideCrossIterator SideIter(testContainer);
 
         // Create another iterator and assign the first iterator to it
-        SideCrossIterator SideIter2(defaultContainer);
+        MagicalContainer::SideCrossIterator SideIter2(defaultContainer);
         SideIter2 = SideIter;
 
         // Check if the container references are the same
@@ -175,7 +175,7 @@ TEST_CASE("SideCrossIterator")
             testContainer.addElement(i); // 5 4 3 2 1
         }
 
-        SideCrossIterator SideIter(testContainer);
+        MagicalContainer::SideCrossIterator SideIter(testContainer);
 
         vector<int> compare{ 5, 1, 4, 2, 3 };
 
@@ -196,7 +196,7 @@ TEST_CASE("SideCrossIterator")
         testContainer.addElement(2);
         testContainer.addElement(3);
 
-        SideCrossIterator SideIter(testContainer);
+        MagicalContainer::SideCrossIterator SideIter(testContainer);
 
         // Increment the iterator and check the value
         ++SideIter;
@@ -218,7 +218,7 @@ TEST_CASE("SideCrossIterator")
         testContainer.addElement(2);
         testContainer.addElement(33);
 
-        SideCrossIterator SideIter(testContainer);
+        MagicalContainer::SideCrossIterator SideIter(testContainer);
 
         auto begin = SideIter.begin(); // begin iterator
 
@@ -233,7 +233,7 @@ TEST_CASE("SideCrossIterator")
         testContainer.addElement(2);
         testContainer.addElement(33);
 
-        SideCrossIterator SideIter(testContainer);
+        MagicalContainer::SideCrossIterator SideIter(testContainer);
 
         auto end = SideIter.end(); // end iterator
 
@@ -252,10 +252,10 @@ TEST_CASE("PrimeIterator")
         testContainer.addElement(29);
         testContainer.addElement(3);
 
-        PrimeIterator primeIter(testContainer);
+        MagicalContainer::PrimeIterator primeIter(testContainer);
 
         // Create another iterator and assign the first iterator to it
-        PrimeIterator primeIter2(defaultContainer);
+        MagicalContainer::PrimeIterator primeIter2(defaultContainer);
         primeIter2 = primeIter;
 
         // Check if the container references are the same
@@ -274,7 +274,7 @@ TEST_CASE("PrimeIterator")
             testContainer.addElement(i); // 10 9 8 7 6 5 4 3 2 1
         }
 
-        PrimeIterator primeIter(testContainer);
+        MagicalContainer::PrimeIterator primeIter(testContainer);
 
         vector<int> compare{ 7, 5, 3, 2 };
 
@@ -294,7 +294,7 @@ TEST_CASE("PrimeIterator")
         testContainer.addElement(19);
         testContainer.addElement(22);
 
-        PrimeIterator primeIter(testContainer);
+        MagicalContainer::PrimeIterator primeIter(testContainer);
 
         // Increment the iterator and check the value
         ++primeIter;
@@ -310,7 +310,7 @@ TEST_CASE("PrimeIterator")
         testContainer.addElement(2);
         testContainer.addElement(33);
 
-        PrimeIterator primeIter(testContainer);
+        MagicalContainer::PrimeIterator primeIter(testContainer);
 
         auto begin = primeIter.begin(); // begin iterator
 
@@ -325,7 +325,7 @@ TEST_CASE("PrimeIterator")
         testContainer.addElement(2);
         testContainer.addElement(33);
 
-        PrimeIterator primeIter(testContainer);
+        MagicalContainer::PrimeIterator primeIter(testContainer);
 
         auto end = primeIter.end(); // end iterator
 

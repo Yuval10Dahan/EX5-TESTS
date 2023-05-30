@@ -1,6 +1,6 @@
 #include <iostream>
 #include <algorithm>
-#include "MagicalContainer.h"
+#include "MagicalContainer.hpp"
 
 
 
@@ -9,73 +9,73 @@ using namespace std;
 
 
 // Constructor
-PrimeIterator::PrimeIterator(MagicalContainer &container) : mContainer_(container) {}
+MagicalContainer::PrimeIterator::PrimeIterator(MagicalContainer &container) : mContainer_(container) {}
 
 // // default constructor
 // PrimeIterator::PrimeIterator() : mContainer_(MagicalContainer()) {}
 
 // copy constructor
-PrimeIterator::PrimeIterator(const PrimeIterator &other) : mContainer_(other.mContainer_) {}
+MagicalContainer::PrimeIterator::PrimeIterator(const PrimeIterator &other) : mContainer_(other.mContainer_) {}
 
 // destructor
-PrimeIterator::~PrimeIterator() {}
+MagicalContainer::PrimeIterator::~PrimeIterator() {}
 
 // getters
-MagicalContainer PrimeIterator::getMagicalContainer() const
+MagicalContainer MagicalContainer::PrimeIterator::getMagicalContainer() const
 {
     return this->mContainer_;
 }
 
 // operator= (Assignment operator)
-PrimeIterator& PrimeIterator::operator=(const PrimeIterator &other)
+MagicalContainer::PrimeIterator& MagicalContainer::PrimeIterator::operator=(const PrimeIterator &other)
 {
     return *this;
 }
 
 // operator == 
-bool PrimeIterator::operator==(const PrimeIterator &other) const
+bool MagicalContainer::PrimeIterator::operator==(const PrimeIterator &other) const
 {
     return false;
 }
 
 // operator !=
-bool PrimeIterator::operator!=(const PrimeIterator &other) const
+bool MagicalContainer::PrimeIterator::operator!=(const PrimeIterator &other) const
 {
     return false;
 }
 
 // operator >
-bool PrimeIterator::operator>(const PrimeIterator &other) const
+bool MagicalContainer::PrimeIterator::operator>(const PrimeIterator &other) const
 {
     return false;
 }
 
 // operator <
-bool PrimeIterator::operator<(const PrimeIterator &other) const
+bool MagicalContainer::PrimeIterator::operator<(const PrimeIterator &other) const
 {
     return false;
 }
 
 // operator* (Dereference operator)
-int PrimeIterator::operator*() const
+int MagicalContainer::PrimeIterator::operator*() const
 {
     return 0;
 }
 
 // operator++ (prefix --> ++i)
-PrimeIterator& PrimeIterator::operator++()
+MagicalContainer::PrimeIterator& MagicalContainer::PrimeIterator::operator++()
 {
     return *this;
 }
 
 
-PrimeIterator PrimeIterator::begin()
+MagicalContainer::PrimeIterator MagicalContainer::PrimeIterator::begin()
 {
     return *this;
 }
 
 
-PrimeIterator PrimeIterator::end()
+MagicalContainer::PrimeIterator MagicalContainer::PrimeIterator::end()
 {
     return *this;
 }
