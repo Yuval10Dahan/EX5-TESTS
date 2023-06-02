@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue May 30 13:52:49 2023
+# Make data base, printed on Tue May 30 14:46:33 2023
 
 # Variables
 
@@ -236,17 +236,17 @@ GDMSESSION = ubuntu
 # Directories
 
 # . (device 2051, inode 796564): 13 files, no impossibilities.
-# sources (device 2051, inode 799449): 9 files, no impossibilities.
+# sources (device 2051, inode 799449): 10 files, no impossibilities.
 
-# 22 files, no impossibilities in 2 directories.
+# 23 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
-%.o: %.cpp
+%.o: %.cpp sources/MagicalContainer.hpp
 #  recipe to execute (from 'Makefile', line 32):
 	$(CXX) $(CXXFLAGS) --compile $< -o $@
 
-objects/%.o: sources/%.cpp
+objects/%.o: sources/%.cpp sources/MagicalContainer.hpp
 #  recipe to execute (from 'Makefile', line 35):
 	$(CXX) $(CXXFLAGS) --compile $< -o $@
 
@@ -374,12 +374,12 @@ objects/myTest.o:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 43 / storage = 504 B / avg = 11 B
-# current buf: size = 8162 B / used = 504 B / count = 43 / avg = 11 B
+# strcache buffers: 1 (0) / strings = 45 / storage = 554 B / avg = 12 B
+# current buf: size = 8162 B / used = 554 B / count = 45 / avg = 12 B
 
-# strcache performance: lookups = 64 / hit rate = 32%
+# strcache performance: lookups = 67 / hit rate = 32%
 # hash-table stats:
-# Load=43/8192=1%, Rehash=0, Collisions=0/64=0%
-# Finished Make data base on Tue May 30 13:52:49 2023
+# Load=45/8192=1%, Rehash=0, Collisions=0/67=0%
+# Finished Make data base on Tue May 30 14:46:33 2023
 
  
